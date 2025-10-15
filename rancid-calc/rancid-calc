@@ -7,11 +7,13 @@ def on_activate(app):
     btn = Gtk.Button(label="Hello, World!")
     fixed = Gtk.Fixed()
 
-#    btn2 = Gtk.Button(label="Hello, World!")
+    btn2 = Gtk.Button(label="Hello, World!")
     btn.connect('clicked', lambda x: win.close())
-#    btn2.connect('clicked', lambda x: win.close())
+    btn2.connect('clicked', lambda x: win.close())
     fixed.put(btn, 50, 200)
+    fixed.put(btn2, 100, 200)
     btn.set_size_request(150, 60)
+    btn2.set_size_request(150, 60)
     win.set_child(fixed)
     win.present()
 
