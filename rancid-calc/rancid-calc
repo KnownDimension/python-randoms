@@ -1,0 +1,36 @@
+import gi
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+
+def on_activate(app):
+    win = Gtk.ApplicationWindow(application=app)
+    btn = Gtk.Button(label="Hello, World!")
+    fixed = Gtk.Fixed()
+
+#    btn2 = Gtk.Button(label="Hello, World!")
+    btn.connect('clicked', lambda x: win.close())
+#    btn2.connect('clicked', lambda x: win.close())
+    fixed.put(btn, 50, 200)
+    btn.set_size_request(150, 60)
+    win.set_child(fixed)
+    win.present()
+
+
+    css = Gtk.CssProvider()
+#    css.load_from_data(b"""
+#    btn {
+#        font-size: 18px;
+#        min-width: 200px;
+#        min-height: 60px;
+#    }
+#    """)
+#    btn.get_style_context().add_provider(css, Gtk.STYLE_PROVIDER_PRIORITY_USER)
+
+
+
+
+
+
+app = Gtk.Application(application_id='org.gtk.Example')
+app.connect('activate', on_activate)
+app.run(None)
