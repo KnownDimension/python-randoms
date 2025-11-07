@@ -1,12 +1,18 @@
 import gi
 gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk, Pango
+Textor = "sigma"
+
+
+def onclick():
+    Textor = "real"
+
 
 def on_activate(app):
     win = Gtk.ApplicationWindow(application=app)
     
     buttonsize = 2
-    Textor = "sigma"
+    
     labelBox = Gtk.Box(spacing = 10)
     theLabel = Gtk.Label()
     theLabel.set_markup(f"<span font_size='24000'>{Textor}</span>")
@@ -25,6 +31,13 @@ def on_activate(app):
     btnAC = Gtk.Button(label="AC")
     btnEQ = Gtk.Button(label="=")
     
+    btn1.connect("clicked", Textor = "real")
+
+
+
+
+
+
     grid = Gtk.Grid()
 
     grid.attach(labelBox, 0, 0, 4, 1)
