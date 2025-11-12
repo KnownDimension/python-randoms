@@ -1,4 +1,4 @@
-### borderline basic math complete
+# borderline basic math complete
 
 ## what is this
 this is a basic calculator to do basic math in a arguably poorly layed out gtk app done entirely in python
