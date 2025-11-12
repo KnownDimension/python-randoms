@@ -136,6 +136,6 @@ def on_activate(app):
 
 
 
-app = Gtk.Application(application_id='org.gtk.Example')
+app = Gtk.Application(application_id='org.unknowndimension.rancid-calc')
 app.connect('activate', on_activate)
 app.run(None)
